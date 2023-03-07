@@ -33,11 +33,28 @@ public:
 	Triangle(const Point& p1, const Point& p2, const Point& p3) : p1(p1), p2(p2), p3(p3) {}
 
 	void print() override {
-		std::cout << "Трикутник з вершин (" << p1.x << ", " << p1.y << "), (" << p2.x << ", " << p2.y << "), (" << p3.x << ", " << p3.y << ")" << std::endl;
+		cout << "Трикутник з вершин (" << p1.x << ", " << p1.y << "), (" << p2.x << ", " << p2.y << "), (" << p3.x << ", " << p3.y << ")" << std::endl;
 	}
 };
+class Square : public Figure {
+public:
+	Point p1, p2, p3, p4;
+	Square(const Point& p1, const Point& p2, const Point& p3, const Point& p4) : p1(p1), p2(p2), p3(p3), p4(p4) {}
 
+	void print() override {
+		std::cout << "Квадрат з вершин (" << p1.x << ", " << p1.y << "), (" << p2.x << ", " << p2.y << "), (" << p3.x << ", " << p3.y << "), (" << p4.x << ", " << p4.y << ")" << std::endl;
+	}
+};
+class Circle : public Figure {
+public:
+	Point center;
+	double radius;
+	Circle(const Point& center, double radius) : center(center), radius(radius) {}
 
+	void print() override {
+		std::cout << "Коло з центром (" << center.x << ", " << center.y << ") та радіусом " << radius << std::endl;
+	}
+};
 int main() {
 
 
