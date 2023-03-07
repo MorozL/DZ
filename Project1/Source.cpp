@@ -27,6 +27,17 @@ public:
 	}
 };
 
+class Triangle : public Figure {
+public:
+	Point p1, p2, p3;
+	Triangle(const Point& p1, const Point& p2, const Point& p3) : p1(p1), p2(p2), p3(p3) {}
+
+	void print() override {
+		std::cout << "Трикутник з вершин (" << p1.x << ", " << p1.y << "), (" << p2.x << ", " << p2.y << "), (" << p3.x << ", " << p3.y << ")" << std::endl;
+	}
+};
+
+
 int main() {
 
 
