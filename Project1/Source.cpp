@@ -11,6 +11,22 @@ public:
 	}
 };
 
+class Figure {
+public:
+	virtual void print() = 0; // Чисто віртуальний метод для виведення інформації про фігуру
+};
+
+// Клас лінія (по двом точкам)
+class Line : public Figure {
+public:
+	Point p1, p2;
+	Line(const Point& p1, const Point& p2) : p1(p1), p2(p2) {}
+
+	void print() override {
+		cout << "Лінія з точки (" << p1.x << ", " << p1.y << ") до точки (" << p2.x << ", " << p2.y << ")" << std::endl;
+	}
+};
+
 int main() {
 
 
